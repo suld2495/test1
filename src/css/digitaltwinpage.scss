@@ -1,0 +1,237 @@
+.dtBanner{
+    .backImage{
+        height:1100px;
+        transform:translateY(-220px);
+    }
+    .title{
+        font-size: 30px;
+        //height: 90px;
+        //bottom: 30px;
+        text-align: right;
+        width: 560px;
+
+    }
+    .squareBox{
+        height: 20px;
+        width: 20px;
+        bottom:120px;
+        left:600px !important;
+    }
+    @media screen and (max-width: 640px){
+        .backImage{
+            height:500px;
+            transform:translateY(-60px) translateX(-120px);
+        }
+        .title{
+            font-size: 16px;
+            height: 80px;
+            bottom: 20px;
+            text-align: right;
+        }
+        .squareBox{
+            bottom:100px !important;
+        }
+    }
+    @media screen and (min-width: 1600px) {
+        .backImage {
+            height:1800px;
+            transform:translateY(-700px) translateX(-200px);
+        }
+    }
+}
+.dt-even{
+    .contents {
+        &__titleBox {
+            grid-area: 1 / 1 / 2 / 2;
+            padding:0 0 0 60px;
+
+        }
+        &__imgBox{
+            grid-area: 1 / 2 / 4 / 3;
+            justify-content: center;
+            padding-right: 60px;
+
+        }
+        &__textBox{
+            grid-area: 2 / 1 / 4 / 2;
+            padding:0 0 0 60px;
+
+        }
+    }
+
+    @media screen and (max-width: 640px){
+        .contents{
+            &__titleBox {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+            &__imgBox{
+                grid-area: 1 / 1 / 2 / 2;
+            }
+            &__textBox{
+                grid-area: 3 / 1 / 4 / 2;
+            }
+        }
+    }
+}
+.dt-odd{
+    .contents{
+        &__titleBox {
+            grid-area: 1 / 2 / 2 / 3;
+            padding:0 60px 0 0;
+        }
+        &__imgBox{
+            grid-area: 1 / 1 / 4 / 2;
+        }
+        &__textBox{
+            grid-area: 2 / 2 / 4 / 3;
+            padding:0 60px 0 0;
+
+            div{
+                //padding:20px 0;
+            }
+        }
+    }
+    @media screen and (max-width: 640px){
+        .contents{
+            &__titleBox {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+            &__imgBox{
+                grid-area: 1 / 1 / 2 / 2;
+            }
+            &__textBox{
+                grid-area: 3 / 1 / 4 / 2;
+            }
+        }
+    }
+
+}
+
+.dt-even, .dt-odd{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    .contents{
+        width:100%;
+        height:100%;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.2fr repeat(2, 1fr);
+        margin:0 auto;
+        //padding-left: 20px;
+        //padding:0 128px;
+        ul{
+            list-style: disc;
+        }
+        &__titleBox{
+            color: rgb(180, 88, 109);
+            white-space: pre-wrap;
+            font-size: 28px;
+            font-weight:700;
+            margin-bottom: 26px;
+        }
+        &__textBox{
+            display:flex;
+            flex-direction: column;
+            height:100%;
+            .square{
+                line-height: 14px;
+            }
+            &__title{
+                max-width:170px;
+                height:20px;
+                display:flex;
+                align-items: center;
+                //justify-content: center;
+                font-size:20px;
+                //padding:0px 10px;
+                //border-left: 5px solid rgb(180, 88, 109);
+                //border-right: 5px solid rgb(180, 88, 109);
+                margin:0;
+                margin-left: 20px;
+
+                text-align: center;
+                font-weight: 700;
+            }
+
+            .text{
+                padding:10px 0 10px 0;
+                margin-left: 20px;
+                margin-bottom: 12px;
+                font-size: 16px;
+                color:rgba(0,0,0,0.7);
+                font-family:Poppins, sans-serif;
+            }
+            .title_1{
+                padding:25px 0px;
+            }
+            ul{
+                padding:0 10px 0 20px;
+                margin:0;
+            }
+        }
+        &__imgBox{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 60px;
+            .img{
+
+                background-color: #fff;
+                border-radius: 6px;
+                box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+                color: #4a4a4a;
+                display: block;
+                padding: 0.25rem;
+            }
+        }
+    }
+    @media screen and (max-width: 640px){
+        .contents{
+            padding:0 12px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.2fr 0.1fr 1fr;
+            &__titleBox{
+                font-size: 20px;
+                padding:8px 0;
+            }
+            &__textBox{
+                padding:0;
+                &__title{
+                    font-size: 16px;
+                    padding:0;
+                }
+                .text{
+                    padding:10px 0 10px 0;
+                    font-size: 12px;
+                    color:rgba(0,0,0,0.7);
+                    font-family:Poppins, sans-serif;
+                }
+
+                ul{
+                    padding:0 10px 0 20px;
+                    margin:0;
+                }
+            }
+            &__imgBox{
+                width: 100%;
+                padding: 0 10px;
+                img{
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+.dtLine{
+    height:1px;
+    margin:48px 10%;
+    background-color: rgba(0,0,0,0.2);
+}
+
+
+
+

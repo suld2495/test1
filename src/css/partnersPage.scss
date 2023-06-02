@@ -1,0 +1,262 @@
+.partnerPage{
+  .exBox{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: rgba(0,0,0,0.7);
+    &__title{
+      position: relative;
+
+      span{
+        position: absolute;
+        left:-16px;
+        top: 30px;
+        color:rgb(180, 88, 109);
+        font-size:15px;
+      }
+      font-size:30px;
+      font-weight: 700;
+    }
+  }
+
+  .partnerBanner{
+    .backImage{
+      height:1100px;
+      opacity: 0.8;
+      transform:translateY(-400px) translateX(-40px);
+    }
+  }
+
+  &__titleSection{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:40px 0;
+    &__title{
+      font-size:36px;
+      text-align: center;
+      color:rgb(180, 88, 109);
+      font-weight: 700;
+      padding:10px;
+    }
+    &__subText{
+      font-size:20px;
+      text-align: center;
+      font-weight:500;
+      padding-bottom: 20px;
+    }
+    &__contents{
+      display: flex;
+      padding-top:20px;
+      .circleBox{
+        width: 300px;
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+
+        img{
+          width: 140px;
+        }
+        .circle{
+          width:125px;
+          height:125px;
+          font-size:36px;
+          border-radius: 50%;
+          background-color: #DF8D93;
+          color:white;
+          font-weight: 700;
+          text-align: center;
+          vertical-align: middle;
+          line-height: 125px;
+        }
+        &__text{
+          font-size:20px;
+          font-weight:500;
+          padding:10px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  &__partnerSection{
+    padding:50px 120px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //width: fit-content;
+    .logobox{
+      display:grid;
+      justify-content: center;
+      align-items: center;
+      margin:0 auto;
+    }
+    .partnerCon{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 300px;
+      //width: 800px;
+      //width: 800px;
+      //margin: 0;
+      .partnerBox{
+        //padding: 4px 8px;
+        img {
+          width: 100%;
+        }
+        flex: 0 0 20%;
+
+      }
+    }
+  }
+  &__globalSection{
+    &__sub{
+      text-align: center;
+      line-height: 2;
+      font-size: 18px;
+      margin: 24px 0;
+    }
+  }
+  &__globalCardSection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .partnerCard{
+      padding: 16px;
+      width: 400px;
+      &__content{
+        font-size: 16px;
+        padding: 8px 30px;
+        box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+        //width:400px;
+        height: 450px;
+
+        &:hover {
+          transform: translateY(-4px);
+          //background: rgba(220,220,220,0.5);
+        }
+        &__imgBox{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100px;
+          img{
+            height: 60%;
+            //width: 100px;
+            //max-width: 200px;
+            //height: auto;
+          }
+        }
+      }
+    }
+  }
+  &__contactSection{
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: rgba(0,0,0,0.7);
+  }
+  @media (max-width: 640px) {
+    .partnerBanner{
+      .backImage{
+        height:500px;
+        transform:translateY(-200px) translateX(-40px);
+      }
+    }
+    .exBox{
+      margin-bottom: 20px;
+      &__title{
+        span{
+          top:16px;
+          font-size:15px;
+        }
+        font-size:20px;
+      }
+    }
+    &__titleSection{
+      padding: 20px 0;
+      &__title{
+        font-size:28px;
+      }
+      &__subText{
+        font-size:16px;
+      }
+      &__contents{
+        display: flex;
+        flex-direction: column;
+        .circleBox{
+          margin-bottom: 16px;
+          .circle{
+          }
+          &__text{
+            font-size:14px;
+          }
+        }
+      }
+    }
+    &__partnerSection{
+      padding:20px 20px 50px 20px;
+      .partnerCon{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 10px;
+        .partnerBox{
+          //padding: 4px 8px;
+
+          //flex: 0 0 16.6666%;
+        }
+      }
+    }
+    &__globalSection{
+      &__sub{
+        text-align: center;
+        line-height: 2;
+        font-size: 14px;
+        margin: 24px 0;
+      }
+    }
+    &__globalCardSection{
+      .partnerCard{
+        padding: 16px;
+        //width: 400px;
+        &__content{
+          font-size: 12px;
+          padding: 8px 16px;
+          height: 360px;
+
+          &__imgBox{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            img{
+              height: 60%;
+              //width: 100px;
+              //max-width: 200px;
+              //height: auto;
+            }
+          }
+        }
+      }
+    }
+    &__contactSection{
+      font-size: 14px;
+    }
+  }
+  @media screen and (min-width: 1600px) {
+    .partnerBanner{
+      .backImage{
+        height:1700px;
+        transform:translateY(-1000px) translateX(0px);
+      }
+    }
+  }
+}
+
